@@ -1,0 +1,6 @@
+.search-menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    margin: 0 40px;
+}
