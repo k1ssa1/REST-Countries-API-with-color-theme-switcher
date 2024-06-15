@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/cards.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/cards.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <script src="./js/getAll.js"></script>
     <title>Document</title>
-</head>
-<body>  
+  </head>
+  <body>
     <header>
-        <nav>
-            <h1>where in the world?</h1>
-            <button>Dark mode</button>
-        </nav>
+      <nav id="nav">
+        <h1>where in the world?</h1>
+        <button id="darkmode-btn">Dark mode</button>
+      </nav>
     </header>
 
     <div class="main-container">
-        <div class="search-menu">
-            <input type="text" placeholder="Search for a country">
-            <select name="region" id="region">
-                <option value="">Filter by region</option>
-                <option value="">Africa</option>
-                <option value="">America</option>
-                <option value="">Asia</option>
-                <option value="">Europe</option>
-                <option value="">Oceania</option>
-            </select>
-        </div>
-        <div id="countries-card-displayer">
-        </div>
+      <div class="search-menu">
+        <form id="searchForm">
+            <input type="text" placeholder="Search for a country..." id="country_search" />
+        </form>
+        <script src="./js/getCountryById.js"></script>
+        <select name="region" id="region_search">
+          <option value="" disabled selected>Search by region</option>
+          <option value="" class="regions">Africa</option>
+          <option value="" class="regions">America</option>
+          <option value="" class="regions">Asia</option>
+          <option value="" class="regions">Europe</option>
+          <option value="" class="regions">Oceania</option>
+        </select>
+      </div>
+      <div id="countries-card-displayer"></div>
     </div>
-</body>
+  </body>
 </html>
