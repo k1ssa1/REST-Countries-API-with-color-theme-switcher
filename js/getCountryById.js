@@ -13,7 +13,7 @@ let text_search = document.getElementById("searchForm").addEventListener("submit
             displayAll()
         }
 
-        if(xhr_one.status >= 200 && xhr_one.status <= 300 ){
+        if(xhr_one.status >= 200 && xhr_one.status <= 300){
             let searchResponse = JSON.parse(xhr_one.responseText);
             let  main_card_displayer = document.getElementById("countries-card-displayer")
             main_card_displayer.innerHTML = "";

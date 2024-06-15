@@ -20,6 +20,7 @@
 .search-menu #region_search{
     width: 300px;
     margin: 0 62px 0 0;
+    height: 100%;
     box-shadow: 0 2px 5px rgba(128, 128, 128, 0.425);;
     border: 1px solid hsl(0, 0%, 98%);
     color: hsl(0, 0%, 52%);

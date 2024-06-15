@@ -30,14 +30,17 @@
             <input type="text" placeholder="Search for a country..." id="country_search" />
         </form>
         <script src="./js/getCountryById.js"></script>
-        <select name="region" id="region_search">
-          <option value="" disabled selected>Search by region</option>
-          <option value="" class="regions">Africa</option>
-          <option value="" class="regions">America</option>
-          <option value="" class="regions">Asia</option>
-          <option value="" class="regions">Europe</option>
-          <option value="" class="regions">Oceania</option>
-        </select>
+        <form id="selectForm">
+            <select name="region" id="region_search">
+                <option  disabled selected>Search by region</option>
+                <option class="regions">Africa</option>
+                <option class="regions">America</option>
+                <option class="regions">Asia</option>
+                <option class="regions">Europe</option>
+                <option class="regions">Oceania</option>
+              </select>
+        </form>
+        <script src="./js/getCountryByRegion.js"></script>
       </div>
       <div id="countries-card-displayer"></div>
     </div>
