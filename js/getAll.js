@@ -55,6 +55,7 @@ const displayAll = () => {
             localStorage.setItem("flagImage", element.flags.png);
             localStorage.setItem("countryName", element.name.common);
             localStorage.setItem("nativeName", element.name.official);
+            localStorage.setItem("borders", element.borders.join(", "));
             localStorage.setItem("population", element.population);
             localStorage.setItem("region", element.region);
             localStorage.setItem("subregion", element.subregion);
