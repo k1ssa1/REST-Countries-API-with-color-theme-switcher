@@ -51,6 +51,7 @@ let text_search = document.getElementById("searchForm").addEventListener("submit
             card_description.appendChild(list_group);
             card.appendChild(flag_container);
             card.appendChild(card_description);
+            
             main_card_displayer.appendChild(card);
         }else{
             console.log("something went wrong" + xhr_one.status)

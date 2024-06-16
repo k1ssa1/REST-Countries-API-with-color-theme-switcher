@@ -1,3 +1,6 @@
+let card = document.createElement("div");
+card.className = "card";
+
 const displayAll = () => {
   let xhr_all = new XMLHttpRequest();
   let url_all = "https://restcountries.com/v3.1/all";
@@ -45,6 +48,26 @@ const displayAll = () => {
         card_description.appendChild(list_group);
         card.appendChild(flag_container);
         card.appendChild(card_description);
+
+        function clickFunction(){
+          card.addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.setItem("flagImage", element.flags.png);
+            localStorage.setItem("countryName", element.name.common);
+            localStorage.setItem("nativeName", element.name.official);
+            localStorage.setItem("population", element.population);
+            localStorage.setItem("region", element.region);
+            localStorage.setItem("subregion", element.subregion);
+            localStorage.setItem("capital", element.capital[0]);
+            localStorage.setItem("tld", Object.values(element.tld).join(", "));
+            localStorage.setItem("currencies", Object.values(element.currencies)[0].name);
+            localStorage.setItem("languages", Object.values(element.languages).join(", "));
+            window.location.assign("countryDetails.html")
+          });
+        }
+
+        clickFunction();
+
         main_card_displayer.appendChild(card);
       });
     } else {
@@ -55,4 +78,4 @@ const displayAll = () => {
   xhr_all.send();
 };
 
-displayAll()
+document.addEventListener("DOMContentLoaded", displayAll)

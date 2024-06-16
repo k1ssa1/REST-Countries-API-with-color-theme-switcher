@@ -12,3 +12,11 @@ nav{
 nav h1{
     font-weight: 800
 }
+
+nav #darkmode-btn{
+    padding: 10px 30px;
+    font-weight: 300;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid rgba(251, 252, 252, 0.13)
+}

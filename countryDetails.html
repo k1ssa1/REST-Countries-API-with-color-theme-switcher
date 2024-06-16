@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+          <h1>where in the world?</h1>
+          <button id="darkmode-btn"><i class="fa-solid fa-moon"></i>Dark mode</button>
+        </nav>
+      </header>
+
+      <div class="back">
+        <button onclick="myfunction()">Back</button>
+      </div>
+
+      <script>
+        try{
+           function myfunction(){
+            window.location.assign("index.html");
+        }  
+        }catch(err){
+            console.log(err)
+        }
+      </script>
+      <div id="countryCardDetail"></div>
+      <script src="./js/getCountryDetail.js"></script>
+</body>
+</html>
