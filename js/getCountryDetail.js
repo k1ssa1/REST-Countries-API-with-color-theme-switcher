@@ -10,10 +10,13 @@ let languages = localStorage.getItem("languages")
 let borders = localStorage.getItem("borders")
 let flagImage = localStorage.getItem("flagImage")
 
-
 let flagIcon = document.createElement("img")
 flagIcon.src = flagImage
 
 
-document.getElementById("countryCardDetail").appendChild(flagIcon)
-document.getElementById("countryCardDetail").innerHTML += countryName + population + nativeName + region + subregion + "capital :" + capital + "<br>" + "tld: " + tld  + "<br>" + currencies + languages + "<br>" + borders
+document.getElementById("countryCardDetail").appendChild(flagIcon);
+if(borders !== undefined){
+    document.getElementById("countryCardDetail").innerHTML += countryName + population + nativeName + region + subregion + "capital :" + capital + "<br>" + "tld: " + tld  + "<br>" + currencies + languages + "<br>" + "borders:" + borders;
+}if(borders == undefined){
+    document.getElementById("countryCardDetail").innerHTML += countryName + population + nativeName + region + subregion + "capital :" + capital + "<br>" + "tld: " + tld  + "<br>" + currencies + languages + "<br>" + "borders:" + "no borders";
+}

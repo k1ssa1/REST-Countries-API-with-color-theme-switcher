@@ -55,7 +55,6 @@ const displayAll = () => {
             localStorage.setItem("flagImage", element.flags.png);
             localStorage.setItem("countryName", element.name.common);
             localStorage.setItem("nativeName", element.name.official);
-            localStorage.setItem("borders", element.borders.join(", "));
             localStorage.setItem("population", element.population);
             localStorage.setItem("region", element.region);
             localStorage.setItem("subregion", element.subregion);
@@ -63,6 +62,11 @@ const displayAll = () => {
             localStorage.setItem("tld", Object.values(element.tld).join(", "));
             localStorage.setItem("currencies", Object.values(element.currencies)[0].name);
             localStorage.setItem("languages", Object.values(element.languages).join(", "));
+            if(element.borders !== undefined){
+              localStorage.setItem("borders", element.borders.join(", "));
+            }if(element.borders == undefined){
+              localStorage.setItem("borders", element.borders ="no borders");
+            }
             window.location.assign("countryDetails.html")
           });
         }
