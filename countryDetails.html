@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/country_card.css">
     <title>Document</title>
 </head>
 <body>
@@ -28,7 +29,22 @@
             console.log(err)
         }
       </script>
-      <div id="countryCardDetail"></div>
+      <div id="countryCardDetail">
+        <div id="countryCardImg"></div>
+        <div id="countryCardDescription">
+          <div id="countryCardDescriptionHeader">
+            <h4 id="countryCardTitle"></h4>
+          </div>
+          <div id="countryCardMain">
+            <ul id="firstList"></ul>
+            <div id="secondList"></div>
+          </div>
+          <div id="borderDetails">
+            <h6>Border Countries:</h6>
+            <ul id="bordersList"></ul>
+          </div>
+        </div>
+      </div>
       <script src="./js/getCountryDetail.js"></script>
 </body>
 </html>

@@ -50,7 +50,7 @@ let select_search = document.getElementById("region_search").addEventListener("c
                 card.appendChild(flag_container);
                 card.appendChild(card_description);
                 document.getElementById("countries-card-displayer").appendChild(card);
-                
+                clickFunction(card, value);
             })
         }else{
             console.log("something went wrong :" + xhr_region.status)

@@ -1,6 +1,28 @@
 let card = document.createElement("div");
 card.className = "card";
 
+function clickFunction(item, element){
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.setItem("flagImage", element.flags.png);
+    localStorage.setItem("countryName", element.name.common);
+    localStorage.setItem("nativeName", element.name.official);
+    localStorage.setItem("population", element.population);
+    localStorage.setItem("region", element.region);
+    localStorage.setItem("subregion", element.subregion);
+    localStorage.setItem("capital", element.capital[0]);
+    localStorage.setItem("tld", Object.values(element.tld).join(", "));
+    localStorage.setItem("currencies", Object.values(element.currencies)[0].name);
+    localStorage.setItem("languages", Object.values(element.languages).join(", "));
+    if(element.borders !== undefined){
+      localStorage.setItem("borders", element.borders.join(" "));
+    }if(element.borders == undefined){
+      localStorage.setItem("borders", element.borders ="no borders");
+    }
+    window.location.assign("countryDetails.html")
+  });
+}
+
 const displayAll = () => {
   let xhr_all = new XMLHttpRequest();
   let url_all = "https://restcountries.com/v3.1/all";
@@ -49,29 +71,7 @@ const displayAll = () => {
         card.appendChild(flag_container);
         card.appendChild(card_description);
 
-        function clickFunction(){
-          card.addEventListener("click", (e) => {
-            e.preventDefault();
-            localStorage.setItem("flagImage", element.flags.png);
-            localStorage.setItem("countryName", element.name.common);
-            localStorage.setItem("nativeName", element.name.official);
-            localStorage.setItem("population", element.population);
-            localStorage.setItem("region", element.region);
-            localStorage.setItem("subregion", element.subregion);
-            localStorage.setItem("capital", element.capital[0]);
-            localStorage.setItem("tld", Object.values(element.tld).join(", "));
-            localStorage.setItem("currencies", Object.values(element.currencies)[0].name);
-            localStorage.setItem("languages", Object.values(element.languages).join(", "));
-            if(element.borders !== undefined){
-              localStorage.setItem("borders", element.borders.join(", "));
-            }if(element.borders == undefined){
-              localStorage.setItem("borders", element.borders ="no borders");
-            }
-            window.location.assign("countryDetails.html")
-          });
-        }
-
-        clickFunction();
+        clickFunction(card, element);
 
         main_card_displayer.appendChild(card);
       });
