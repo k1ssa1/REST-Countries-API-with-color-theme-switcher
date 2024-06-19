@@ -1,3 +1,11 @@
+.back button{
+    margin: 0 50px;
+    padding: 10px 30px;
+    background-color: whitesmoke;
+    border: 1px solid rgb(218, 218, 218);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.185);
+}
+
 #countryCardDetail, #countryCardMain{
     display: grid;
     grid-template-columns: auto auto;
@@ -5,4 +13,59 @@
 
 #borderDetails{
     display: flex
+}
+
+#countryCardMain{
+    justify-content: space-between;
+}
+
+#countryCardDetail{
+    color: hsl(200, 15%, 8%);
+    margin: 100px;
+    height: 350px
+}
+
+
+#countryCardImg img{
+    width: 100%;
+}
+
+#countryCardDescription{
+    padding: 0 100px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+#countryCardDescription h4{
+    font-weight: 800;
+    font-size: 30px;
+}
+
+#countryCardDescription ul{
+    list-style: none;
+    padding: 0;
+}
+
+#countryCardDescription ul li{
+    margin: 20px 0;
+    font-weight: 300;
+} 
+
+#borderDetails{
+    display: flex;
+    align-items: center;
+}
+
+#borderDetails h6{
+    font-size: 16px;
+}
+
+#borderDetails #bordersList{
+    display: flex;
+    margin: 0 20px
+}
+
+#borderDetails #bordersList li{
+    margin: 0 20px;
+    padding: 2px 5px;
+    border: 1px solid rgb(190, 190, 190);
 }

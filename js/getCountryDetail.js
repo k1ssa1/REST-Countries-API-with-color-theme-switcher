@@ -45,8 +45,4 @@ function dispayBorders(){
     }
 }
 
-if(borders !== undefined){
-    createCountryCard()
-}if(borders == undefined){
-    createCountryCard()
-}
+createCountryCard()

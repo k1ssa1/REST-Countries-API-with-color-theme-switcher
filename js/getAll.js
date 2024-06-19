@@ -17,7 +17,7 @@ function clickFunction(item, element){
     if(element.borders !== undefined){
       localStorage.setItem("borders", element.borders.join(" "));
     }if(element.borders == undefined){
-      localStorage.setItem("borders", element.borders ="no borders");
+      localStorage.setItem("borders", element.borders = "no/borders" );
     }
     window.location.assign("countryDetails.html")
   });
